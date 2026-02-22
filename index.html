@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(to right, #22c55e, #0f172a);
+        }
+
+        .hero h1 {
+            font-size: 2em;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            background: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* CARDS */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+        }
+
+        .card a {
+            display: block;
+            margin-top: 10px;
+            color: #22c55e;
+        }
+
+        /* BANNER */
+        .banner {
+            margin: 20px;
+            padding: 30px;
+            background: #22c55e;
+            color: black;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* MESSAGE APP */
+        .container {
+            width: 90%;
+            max-width: 500px;
+            margin: auto;
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px;
+            background: #22c55e;
+            border: none;
+            color: white;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background: #1e293b;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>🔥 Welcome to My AI Hub</h1>
+    <p>Discover tools, movies, and more</p>
+    <button>Explore Now</button>
+</div>
+
+<!-- CARDS -->
+<div class="cards">
+    <div class="card">
+        <h3>AI Tools</h3>
+        <p>Explore powerful AI tools</p>
+        <a href="#">Visit</a>
+    </div>
+
+    <div class="card">
+        <h3>Movie Ads</h3>
+        <p>Watch trending movies</p>
+        <a href="#">Watch</a>
+    </div>
+
+    <div class="card">
+        <h3>My Projects</h3>
+        <p>Check my other websites</p>
+        <a href="#">Open</a>
+    </div>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+    🎬 Watch Unlimited Movies Now!
+</div>
+
+<!-- MESSAGE APP -->
+<div class="container">
+    <h2>💬 Leave a Message</h2>
+
+    <form method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <br>
+        <button type="submit">Send</button>
+    </form>
+
+    <ul>
+        {% for msg in messages %}
+            <li>{{ msg[0] }}: {{ msg[1] }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Daniel AI Hub
+</div>
+
+</body>
+</html>
